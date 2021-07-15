@@ -1,0 +1,36 @@
+body {
+    background-color: #f2f9fb;
+}
+
+.header {
+    background-color: #b398f7;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    color: #69508e;
+    max-width: 50%;
+}
+
+.answers-container {
+    background-color: #ffdfaf;
+    max-width: 50%;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    display: none;
+    color: #ad825d;
+}
+
+.show {
+    display: block;
+}
+
+.main {
+    border-radius: 1rem;
+    background-color: #fff;
+    max-width: 50%;
+}
+
+.p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #696b7a;
+}
