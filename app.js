@@ -31,6 +31,7 @@ const handleSubmit = (event) => {
     };
 
     userAnswers.forEach(showUserScore);
+    scrollTo(0, 0);
 };
 
 form.addEventListener("submit", handleSubmit);
