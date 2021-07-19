@@ -25,12 +25,20 @@ const handleQuizSubmit = (event) => {
     };
 
     userAnswers.forEach(showUserScore);
+
     scrollTo(0, 0);
-<<<<<<< HEAD
-=======
-    userAnswersFeedback.classList.add("show");
-    userAnswersFeedback.textContent = `Você acertou ${score}% das respostas`;
->>>>>>> c3539968ea700a0c26740d41f52aed74a45d9764
+
+    userAnswersFeedback.classList.remove("d-none");
+
+    let counter = 0;
+
+    const timer = setInterval(() => {
+        if (counter === score) {
+            clearInterval(timer);
+        }
+        userAnswersFeedback.querySelector(".span").textContent = `${counter}%`;
+        counter++;
+    }, 10);
 };
 
 formQuiz.addEventListener("submit", handleQuizSubmit);
