@@ -1,18 +1,17 @@
-const correctAnswers = ["A", "A", "A", "A", "A"];
-
-const form = document.querySelector("form");
-const input = document.querySelectorAll("input");
+const formQuiz = document.querySelector("form");
 const userAnswersFeedback = document.querySelector(".answers-container");
 
-const handleSubmit = (event) => {
+const correctAnswers = ["A", "A", "A", "A", "A"];
+
+const handleQuizSubmit = (event) => {
     event.preventDefault();
 
     const userAnswers = [
-        form.question1.value,
-        form.question2.value,
-        form.question3.value,
-        form.question4.value,
-        form.question5.value,
+        formQuiz.question1.value,
+        formQuiz.question2.value,
+        formQuiz.question3.value,
+        formQuiz.question4.value,
+        formQuiz.question5.value,
     ];
 
     let score = 0;
@@ -22,16 +21,16 @@ const handleSubmit = (event) => {
 
         if (isACorrectAnswer) {
             score += 20;
-            userAnswersFeedback.classList.add("show");
-            userAnswersFeedback.textContent = `Você acertou ${score}% das respostas`;
-            return;
         }
-
-        userAnswersFeedback.textContent = `Você acertou ${score}% das respostas`;
     };
 
     userAnswers.forEach(showUserScore);
     scrollTo(0, 0);
+<<<<<<< HEAD
+=======
+    userAnswersFeedback.classList.add("show");
+    userAnswersFeedback.textContent = `Você acertou ${score}% das respostas`;
+>>>>>>> c3539968ea700a0c26740d41f52aed74a45d9764
 };
 
-form.addEventListener("submit", handleSubmit);
+formQuiz.addEventListener("submit", handleQuizSubmit);
