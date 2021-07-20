@@ -1,21 +1,62 @@
-body {
-    background-color: #f2f9fb;
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
-.header {
-    background-color: #b398f7;
-    padding: 2.5rem;
-    border-radius: 1rem;
-    color: #69508e;
-    max-width: 50%;
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: #eaedf8;
+}
+
+.hero {
+    background-image: url("https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/team_spirit_hrr4.svg");
+
+    background-image: url("https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/team_spirit_hrr4.svg"),
+        linear-gradient(
+            to right top,
+            #051937,
+            #111d42,
+            #1f214c,
+            #2d2556,
+            #3d275e
+        );
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.quiz {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+        0 15px 40px rgba(166, 173, 201, 0.2);
+}
+
+.hero .col-md-6 {
+    color: #eaedf8;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #69508e; */
+}
+
+.btn-hero {
+    border-color: #b398f7 !important;
+    color: #b398f7;
+}
+
+.btn-hero:hover {
+    color: #eaedf8;
 }
 
 .answers-container {
-    background-color: #ffdfaf;
-    max-width: 50%;
-    padding: 2.5rem;
-    border-radius: 1rem;
-    color: #ad825d;
+    color: #eaedf8;
+    padding: 5rem 3rem;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .main {

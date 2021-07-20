@@ -18,174 +18,209 @@
     </head>
 
     <body>
-        <div class="container-fluid mt-5 header">
-            <h2>Quiz do nordeste</h2>
-            <p>Teste seu nível de conhecimento, arocha o nó fí</p>
+        <div class="hero my-5 container bg-primary">
+            <div class="row">
+                <div class="d-block col-md-6 col-sm-6">
+                    <div class="p-5">
+                        <h1>Você sabe</h1>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Sit at quisquam odio, cum corrupti itaque et
+                            saepe, qui, ea molestiae consequuntur distinctio
+                            autem laborum modi aliquid atque beatae maxime
+                            repellat?
+                        </p>
+                        <button id="btn-hero" class="btn btn-lg btn-hero">
+                            Vamos começar
+                        </button>
+                    </div>
+                </div>
+                <div class="artwork col-md-6 col-sm-6">
+                    <div class="user-feedback answers-container p-5 d-none">
+                        <p>
+                            Você acertou <span class="span">0%</span> das
+                            respostas.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container display-4 d-none answers-container mt-5">
-            <p>
-                Você acertou
-                <span class="span text-success display-4">0%</span> do quiz!
-            </p>
-        </div>
 
-        <div class="container main my-5 p-3">
-            <form class="" action="">
-                <div class="my-3 p-3">
-                    <p class="p">Quantos estados tem a região do Nordeste?</p>
-                    <div class="form-check my-2">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question1"
-                            checked
-                            value="A"
-                            id="9"
-                        />
-                        <label class="form-check-label" for="9"
-                            >9 estados</label
-                        >
-                    </div>
+        <!-- questions  -->
 
-                    <div>
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question1"
-                            value="B"
-                            id="7"
-                        />
-                        <label class="form-check-label" for="7"
-                            >7 estados</label
-                        >
-                    </div>
+        <div class="quiz container my-5 p-5">
+            <div class="row">
+                <div class="col-12">
+                    <form class="" action="">
+                        <div class="my-3 p-3">
+                            <p class="p">
+                                Quantos estados tem a região do Nordeste?
+                            </p>
+                            <div class="form-check my-2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question1"
+                                    checked
+                                    value="A"
+                                    id="9"
+                                />
+                                <label class="form-check-label" for="9"
+                                    >9 estados</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question1"
+                                    value="B"
+                                    id="7"
+                                />
+                                <label class="form-check-label" for="7"
+                                    >7 estados</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="my-3 p-3">
+                            <p class="p">Vixi significa:</p>
+                            <div class="form-check my-2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question2"
+                                    checked
+                                    value="A"
+                                    id="virgemmaria"
+                                />
+                                <label
+                                    class="form-check-label"
+                                    for="virgemmaria"
+                                    >Virgem Maria</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question2"
+                                    value="B"
+                                    id="51101"
+                                />
+                                <label class="form-check-label" for="51101"
+                                    >51101 em algarismos romanos</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="my-3 p-3">
+                            <p class="p">
+                                Qual festa cultural nordestina dura mais tempo?
+                            </p>
+                            <div class="form-check my-2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question3"
+                                    checked
+                                    value="A"
+                                    id="saojoao"
+                                />
+                                <label class="form-check-label" for="saojoao"
+                                    >São João</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question3"
+                                    value="B"
+                                    id="natal"
+                                />
+                                <label class="form-check-label" for="natal"
+                                    >Natal</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="my-3 p-3">
+                            <p class="p">
+                                Ariano Suassuna nasceu em que estado?
+                            </p>
+                            <div class="form-check my-2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question4"
+                                    checked
+                                    value="A"
+                                    id="paraiba"
+                                />
+                                <label class="form-check-label" for="paraiba"
+                                    >Paraíba</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question4"
+                                    value="B"
+                                    id="pernambuco"
+                                />
+                                <label class="form-check-label" for="pernambuco"
+                                    >Pernambuco</label
+                                >
+                            </div>
+                        </div>
+
+                        <div class="my-3 p-3">
+                            <p class="p">Recife é a cidade do:</p>
+                            <div class="form-check my-2">
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question5"
+                                    checked
+                                    value="A"
+                                    id="frevo"
+                                />
+                                <label class="form-check-label" for="frevo"
+                                    >Frevo</label
+                                >
+                            </div>
+
+                            <div>
+                                <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="question5"
+                                    value="B"
+                                    id="tubarao"
+                                />
+                                <label class="form-check-label" for="tubarao"
+                                    >Tubarão</label
+                                >
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="d-grid d-md-block">
+                                    <button class="btn btn-primary btn-lg">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-                <div class="my-3 p-3">
-                    <p class="p">Vixi significa:</p>
-                    <div class="form-check my-2">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question2"
-                            checked
-                            value="A"
-                            id="virgemmaria"
-                        />
-                        <label class="form-check-label" for="virgemmaria"
-                            >Virgem Maria</label
-                        >
-                    </div>
-
-                    <div>
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question2"
-                            value="B"
-                            id="51101"
-                        />
-                        <label class="form-check-label" for="51101"
-                            >51101 em algarismos romanos</label
-                        >
-                    </div>
-                </div>
-
-                <div class="my-3 p-3">
-                    <p class="p">
-                        Qual festa cultural nordestina dura mais tempo?
-                    </p>
-                    <div class="form-check my-2">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question3"
-                            checked
-                            value="A"
-                            id="saojoao"
-                        />
-                        <label class="form-check-label" for="saojoao"
-                            >São João</label
-                        >
-                    </div>
-
-                    <div>
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question3"
-                            value="B"
-                            id="natal"
-                        />
-                        <label class="form-check-label" for="natal"
-                            >Natal</label
-                        >
-                    </div>
-                </div>
-
-                <div class="my-3 p-3">
-                    <p class="p">Ariano Suassuna nasceu em que estado?</p>
-                    <div class="form-check my-2">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question4"
-                            checked
-                            value="A"
-                            id="paraiba"
-                        />
-                        <label class="form-check-label" for="paraiba"
-                            >Paraíba</label
-                        >
-                    </div>
-
-                    <div>
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question4"
-                            value="B"
-                            id="pernambuco"
-                        />
-                        <label class="form-check-label" for="pernambuco"
-                            >Pernambuco</label
-                        >
-                    </div>
-                </div>
-
-                <div class="my-3 p-3">
-                    <p class="p">Recife é a cidade do:</p>
-                    <div class="form-check my-2">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question5"
-                            checked
-                            value="A"
-                            id="frevo"
-                        />
-                        <label class="form-check-label" for="frevo"
-                            >Frevo</label
-                        >
-                    </div>
-
-                    <div>
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            name="question5"
-                            value="B"
-                            id="tubarao"
-                        />
-                        <label class="form-check-label" for="tubarao"
-                            >Tubarão</label
-                        >
-                    </div>
-                </div>
-                <div class="flex">
-                    <button class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
+            </div>
         </div>
     </body>
 

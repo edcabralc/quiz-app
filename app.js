@@ -1,5 +1,7 @@
 const formQuiz = document.querySelector("form");
-const userAnswersFeedback = document.querySelector(".answers-container");
+const btnHero = document.querySelector("#btn-hero");
+const quizContainer = document.querySelector(".quiz");
+const userAnswersFeedback = document.querySelector(".user-feedback");
 
 const correctAnswers = ["A", "A", "A", "A", "A"];
 
@@ -42,3 +44,7 @@ const handleQuizSubmit = (event) => {
 };
 
 formQuiz.addEventListener("submit", handleQuizSubmit);
+
+btnHero.addEventListener("click", () => {
+    scrollTo(0, quizContainer.offsetTop - 20);
+});
