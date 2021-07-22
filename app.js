@@ -1,50 +1,75 @@
 const formQuiz = document.querySelector("form");
-const btnHero = document.querySelector("#btn-hero");
+const buttonShowQuiz = document.querySelector("#btn-hero");
 const quizContainer = document.querySelector(".quiz");
-const userAnswersFeedback = document.querySelector(".user-feedback");
+const userAnswersFeedbackContainer = document.querySelector(
+    ".user-feedback-container"
+);
 
-const correctAnswers = ["A", "A", "A", "A", "A"];
+const correctAnswers = ["D", "B", "A", "A", "C"];
 
-const handleQuizSubmit = (event) => {
-    event.preventDefault();
+let score = 0;
 
-    const userAnswers = [
-        formQuiz.question1.value,
-        formQuiz.question2.value,
-        formQuiz.question3.value,
-        formQuiz.question4.value,
-        formQuiz.question5.value,
-    ];
+const getUserAnswers = () => {
+    let userAnswers = [];
 
-    let score = 0;
+    correctAnswers.forEach((_, index) => {
+        const userAnswer = formQuiz[`question${index + 1}`].value;
+        userAnswers.push(userAnswer);
+    });
 
-    const showUserScore = (userAnswer, index) => {
+    return userAnswers;
+};
+
+const scrollQuizContainerToCenter = () => {
+    const axisYCoordenate = quizContainer.offsetTop - 20;
+    scrollTo(0, axisYCoordenate);
+};
+
+const scrollQuizToTop = () => {
+    scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    });
+    userAnswersFeedbackContainer.classList.remove("d-none");
+};
+
+const animateScoreToUser = () => {
+    let counter = 0;
+    const timer = setInterval(() => {
+        if (counter === score) {
+            clearInterval(timer);
+        }
+        userAnswersFeedbackContainer.querySelector(
+            ".span"
+        ).textContent = `${counter++}%`;
+    }, 10);
+};
+const resetScore = () => (score = 0);
+
+const calculateUserScore = (userAnswers) => {
+    userAnswers.forEach((userAnswer, index) => {
         const isACorrectAnswer = userAnswer === correctAnswers[index];
 
         if (isACorrectAnswer) {
             score += 20;
         }
-    };
+    });
+};
 
-    userAnswers.forEach(showUserScore);
+const handleQuizSubmit = (event) => {
+    event.preventDefault();
 
-    scrollTo(0, 0);
+    const userAnswers = getUserAnswers();
 
-    userAnswersFeedback.classList.remove("d-none");
+    if (score > 0) {
+        score = 0;
+    }
 
-    let counter = 0;
-
-    const timer = setInterval(() => {
-        if (counter === score) {
-            clearInterval(timer);
-        }
-        userAnswersFeedback.querySelector(".span").textContent = `${counter}%`;
-        counter++;
-    }, 10);
+    calculateUserScore(userAnswers);
+    scrollQuizToTop();
+    animateScoreToUser();
 };
 
 formQuiz.addEventListener("submit", handleQuizSubmit);
-
-btnHero.addEventListener("click", () => {
-    scrollTo(0, quizContainer.offsetTop - 20);
-});
+buttonShowQuiz.addEventListener("click", scrollQuizContainerToCenter);
