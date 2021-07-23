@@ -9,16 +9,8 @@ const correctAnswers = ["D", "B", "A", "A", "C"];
 
 let score = 0;
 
-const getUserAnswers = () => {
-    let userAnswers = [];
-
-    correctAnswers.forEach((_, index) => {
-        const userAnswer = formQuiz[`question${index + 1}`].value;
-        userAnswers.push(userAnswer);
-    });
-
-    return userAnswers;
-};
+const getUserAnswers = () =>
+    correctAnswers.map((_, index) => formQuiz[`question${index + 1}`].value);
 
 const scrollQuizContainerToCenter = () => {
     const axisYCoordenate = quizContainer.offsetTop - 20;
